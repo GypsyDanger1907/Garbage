@@ -1,0 +1,69 @@
+import random
+import time
+
+def spin_row():
+    symbols = ["🩻"," 🥀","🪫","🙏","😭"]
+    return [random.choice(symbols) for symbol in range(3)]
+
+def print_row(row):
+    print(" * ".join(row))
+
+def get_payout(row, bet):
+    if row[0] == row[1] == row[2]:
+        if row[0] == "🩻":
+            return bet * 3
+        elif row[0] == " 🥀":
+            return bet * 2
+        elif row[0] == "🪫":
+            return bet * 4
+        else:
+            return bet * 1.5
+    return 0
+
+
+def main():
+    balance = 100
+
+    print("Welcome to Beer Casino!")
+    print("Symbols: 🩻, 🥀, 🪫, 🙏, 😭")
+
+    while balance > 0:
+        print(f"Current balance: ${balance}")
+
+        bet = input("Enter your bet: ")
+
+        if not bet.isdigit():
+            print("Enter a valid number")
+            continue
+
+        bet = int(bet)
+        if not 0 < bet <= 100:
+            print(f"Your bet can't be less than 0 and more than your current balance (${balance})")
+            continue
+
+        balance -= bet
+
+        row = spin_row()
+        print("Spinning...")
+        time.sleep(3)
+        print_row(row)
+        payout = get_payout(row, bet)
+        if payout > 0:
+            print(f"You won ${payout}!")
+        else:
+            print("You lost this round!")
+        balance += payout
+        if balance > 0:
+            play_again = input("Would you like to play again? (y/n): ").upper()
+            if play_again == "Y":
+                continue
+            else:
+                break
+        else:
+            break
+
+    print(f"Thank you for playing! Your balance is ${balance:.2f}!")
+
+
+if __name__ == '__main__':
+    main()
