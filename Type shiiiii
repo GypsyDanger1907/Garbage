@@ -1,0 +1,33 @@
+#Encryption
+import random
+import string
+
+chars = string.punctuation + string.digits + string.ascii_letters + " "
+chars = list(chars)
+key = chars.copy()
+
+random.shuffle(key)
+
+#print(f"Chars: {chars}")
+#print(f"Key: {key}")
+
+#encyrpt
+plain_text = input("Enter a message to encrypt: ")
+cipher_text = ""
+
+for letter in plain_text:
+    index = chars.index(letter)
+    cipher_text += key[index]
+print(f"Original text: {plain_text}")
+print(f"Encrypted text: {cipher_text}")
+
+#decyrpt
+cipher_text_2 = input(f"Enter the cipher text: ")
+plain_text_2 = ""
+
+for letter in cipher_text_2:
+    index = key.index(letter)
+    plain_text_2 += chars[index]
+
+print(f"Original text: {cipher_text_2}")
+print(f"Decrypted text: {plain_text_2}")
