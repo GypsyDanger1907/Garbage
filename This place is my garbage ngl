@@ -1,0 +1,17 @@
+class Car:
+    def __init__(self, model, brand, year, for_sale):
+        self.model = model
+        self.brand = brand
+        self.year = year
+        self.for_sale = for_sale
+    def drive(self):
+        print(f"Driving {self.brand}/{self.model} now")
+    def stop(self):
+        print(f"Stopping {self.brand}/{self.model} now")
+
+car_1 = Car("M5-E60", "BMW", 2008, True)
+print(car_1.model)
+car_2 = Car("RS7","Audi","2016", False)
+print(car_2.brand)
+
+car_2.drive()
