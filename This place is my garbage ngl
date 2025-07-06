@@ -1,3 +1,4 @@
+#Object Oriented Programming
 class Car:
     def __init__(self, model, brand, year, for_sale):
         self.model = model
@@ -15,3 +16,20 @@ car_2 = Car("RS7","Audi","2016", False)
 print(car_2.brand)
 
 car_2.drive()
+
+#Class Variables
+class Student:
+    class_year = 2024
+    num_students = 0
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Student.num_students += 1
+
+student1 = Student("John -", 22)
+student2 = Student("Alice -", 26)
+student3 = Student("Bob", 18)
+print(student1.name, student1.age)
+print(student2.name, student2.age)
+print(student1.class_year,"/", student2.class_year)
+print(Student.num_students)
