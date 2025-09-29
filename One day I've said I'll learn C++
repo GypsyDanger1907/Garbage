@@ -96,3 +96,59 @@ int main(){
 }
 //-------------------------------------------------------------
 
+//--------------------------Namespaces-----------------------------------
+#include <iostream>
+namespace First {
+    int x = 5;
+}
+namespace Second {
+    int x = 10;
+}
+
+int main() {
+/*
+int x = 0; //We can't add another variable as x. So I need to use namespaces.
+std::cout << x; // Outputs: 0
+std::cout << First::x; // Outputs: 5
+std::cout << Second::x; // Outputs: 10
+*/
+
+/*
+using namespace std;
+std::cout << First::x; // Outputs: 5
+*/
+
+/*
+using namespace std;
+cout << First::x; // Outputs: 5
+*/
+
+/*
+using std::cout;
+cout << First::x; // Outputs: 5
+*/
+
+/*
+using std::string;
+string Name = "Michael";
+std::cout << Name; // Outputs: Michael
+*/
+
+/*
+using namespace First;
+std::cout << x; // Outputs: 5
+*/
+
+/*
+using namespace Second;
+std::cout << x; // Outputs: 10
+*/
+
+/*
+using namespace First;
+std::cout << sSecond::x; // Outputs: 10
+*/
+
+return 0;
+}
+//-------------------------------------------------------------
