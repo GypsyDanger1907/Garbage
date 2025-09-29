@@ -73,3 +73,26 @@ int main() {
    return 0;
 }
 //-------------------------------------------------------------
+
+//----------------------------Const---------------------------------
+
+#include <iostream>
+int main(){
+    const double PI = 3.14159;
+    const int LIGHT_SPEED = 299792458; // in m/s
+    const int WIDTH = 1920; //in pixels
+    const int HEIGHT = 1080; //in pixels
+    //You can't change the value of a constant.
+    /*PI=420;
+    This line will cause a compilation error because PI is a constant.
+    */
+    
+    double radius = 10;
+    double circumference = 2 * PI * radius;
+
+    std::cout << circumference << "cm(s)" << std::endl;
+
+    return 0;
+}
+//-------------------------------------------------------------
+
