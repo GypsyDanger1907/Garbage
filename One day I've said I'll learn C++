@@ -1,4 +1,4 @@
-//-------------------------------------------------------------
+//-------------------------------First Lesson------------------------------
 #include <iostream>
 int main() {
 
@@ -17,6 +17,59 @@ int main() {
 }
 //-------------------------------------------------------------
 
-//-------------------------------------------------------------
+//--------------------------Variables-----------------------------------
+#include <iostream>
+int main() {
+   //----integer (whole number)----
+   int age = 6; //declaration of variable x
+   int year = 2017; //declaration of variable y 
+   int sum = age + year; //sum of x and y
 
+   std::cout << age << std::endl; //print x
+   std::cout << year << std::endl; //print y
+   /*
+   int z = 3.6;
+   std::cout << z << '\n'; //prints 3 because z is an integer. We should use float or double.
+   */
+   
+
+   //----double (decimal number)----
+   double price = 3.99; //declaration of variable a
+   double temperature = 27.4; //declaration of variable b
+   std::cout << price << std::endl; //print 3.99
+   std::cout << temperature << std::endl; //print 27.4
+
+   //----char (single character)----
+    char grade = 'A'; //declaration of variable grade
+    char initial = 'B'; //declaration of variable initial
+    
+    std::cout << grade << std::endl; //print A
+    std::cout << initial << std::endl; //print B
+    /*
+    char overflow = "AB"; error:
+    std::cout << overflow << std::endl; //error
+    error: overflow, because char can only store A SINGLE character.
+    */
+
+    //----boolean (true or false)----
+    bool isStudent = true; //declaration of variable isStudent
+    bool isGraduated = false; //declaration of variable isGraduated
+    bool power = (5 > 3); //declaration of variable power, which is true because 5 is greater than 3
+    bool test = !power; //declaration of variable test, which is false because power is true and !true is false
+
+    //----std::string (text)----
+    std::string name = "Michael"; //declaration of variable name
+    std::string day = "Monday"; //declaration of variable day
+    std::string food = "Burger"; //declaration of variable food
+
+    std::cout << name << std::endl; //print Michael
+    std::cout << "Hello "<< name << std::endl; //print hello Michael
+    std::cout << "Today is " + day << std::endl; //print Today is Monday
+    std::cout << "I like " + food << std::endl; //print I like Burger
+
+    //----examples----
+    std::cout << "I am " << age << " years old." << std::endl; //print I am 6 years old.
+    std::cout << "I was born in " << year << "." << std::endl; //print I was born in 2017.
+   return 0;
+}
 //-------------------------------------------------------------
