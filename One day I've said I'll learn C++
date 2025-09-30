@@ -180,3 +180,28 @@ int main() {
     return 0;
 }
 //-------------------------------------------------------------
+
+//---------------------------Artihmetic Operators----------------------------------
+#include <iostream>
+
+int main(){
+    int student = 20;
+    std::cout << "Students = " << student << std::endl;
+    student += 5; // student = student + 5;
+    std::cout << "Students(20) + 5 = " << student << std::endl;
+    student++; // student = student + 1;
+    std::cout << "Students(25) + 1 = " << student << std::endl;
+    student--; // student = student - 1;
+    std::cout << "Students(26) - 1 = " << student << std::endl;
+    student *= 2; // student = student * 2;
+    std::cout << "Students(25) * 2 = " << student << std::endl;
+    student /= 5; // student = student / 5;
+    std::cout << "Students(50) / 5 = " << student << std::endl;
+    student %= 6; // student = student % 6;
+    std::cout << "Students(10) % 6 = " << student << std::endl;
+    student = 6 - 5 + 4 * 3 / 2; // operator precedence
+    std::cout << "Students(0) + 7 - 5 + 4 * 3 / 2 = " << student << std::endl;
+
+    return 0;   
+}
+//-------------------------------------------------------------
