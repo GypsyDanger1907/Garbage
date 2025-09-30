@@ -152,3 +152,31 @@ std::cout << sSecond::x; // Outputs: 10
 return 0;
 }
 //-------------------------------------------------------------
+
+//--------------------Typedef and Type Aliases-----------------------------------------
+#include <iostream>
+#include <vector>
+
+/*
+typedef std::vector<std::pair<std::string, int>> pairlist_t;
+typedef std::string txt_t;
+typedef int number_t;
+*/
+using txt_t = std::string;
+using number_t = int;
+using pairlist_t = std::vector<std::pair<std::string, int>>;
+
+
+int main() {
+    /*
+    std::vector<std::pair<std::string, int>> pairlist; //pairlist_t pairlist;
+    txt_t txt = "Hello, World!"; //std::string txt = "Hello, World!";
+    number_t number = 42; //int number = 42;*/
+
+    txt_t txt = "Hello, World!";
+    number_t number = 42;
+    pairlist_t pairlist;
+
+    return 0;
+}
+//-------------------------------------------------------------
